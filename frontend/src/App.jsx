@@ -1,7 +1,16 @@
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+
+import ListAllEmployee from "./components/ListAllEmployee";
+import AddEmployee from './pages/AddEmployee';
+
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<ListAllEmployee/>} ></Route>
+            <Route path='/add-employee' element={<AddEmployee/>} ></Route>
+        </Routes>
+    </BrowserRouter>
   )
 }
